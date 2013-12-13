@@ -91,6 +91,39 @@
     STAssertEquals([result cellAtIndex:2], AOGridCellMake(0, 2), @"Solution's cell 2 should be (0,2)");
 }
 
+- (void)testGraphAndDijkstraUsage
+{
+    // This example came from Wikipedia Dijkstra's algorithm page
+    // http://en.wikipedia.org/wiki/Dijkstra's_algorithm
+    
+    // Create the digraph
+    AODirectedGraph *graph = [AODirectedGraph directedGraph];
+    
+    // Add the bidirectional edges (vertices are added automatically when needed)
+    [graph addEdgesBetweenVertex:1 andVertex:2 withWeight:7];
+    [graph addEdgesBetweenVertex:1 andVertex:3 withWeight:9];
+    [graph addEdgesBetweenVertex:1 andVertex:6 withWeight:14];
+    [graph addEdgesBetweenVertex:2 andVertex:3 withWeight:10];
+    [graph addEdgesBetweenVertex:2 andVertex:4 withWeight:15];
+    [graph addEdgesBetweenVertex:3 andVertex:6 withWeight:2];
+    [graph addEdgesBetweenVertex:3 andVertex:4 withWeight:11];
+    [graph addEdgesBetweenVertex:4 andVertex:5 withWeight:6];
+    [graph addEdgesBetweenVertex:5 andVertex:6 withWeight:9];
+    
+    // Init the Dijkstra algorithm using the digraph and starting from vertex 1
+    AODijkstra *dijkstra = [AODijkstra dijkstraWithGraph:graph fromVertex:1];
+    
+    // Get the path to vertex 5
+    AODijkstraResult *result = [dijkstra toVertex:5];
+    
+    // Assert that the solution is a 4 vertices path and go from vertex 1 to 3 to 6 than to 5
+    STAssertEquals(result.vertexCount, (AOGraphIndex)4, @"Solution should have a path of 4 vertices");
+    STAssertEquals([result vertexAtIndex:0], (AOGraphVertex)1, @"Solution's vertex 0 should be 1");
+    STAssertEquals([result vertexAtIndex:1], (AOGraphVertex)3, @"Solution's vertex 1 should be 3");
+    STAssertEquals([result vertexAtIndex:2], (AOGraphVertex)6, @"Solution's vertex 2 should be 6");
+    STAssertEquals([result vertexAtIndex:3], (AOGraphVertex)5, @"Solution's vertex 3 should be 5");
+}
+
 - (void)test_Grid_init
 {
     AOGrid *grid = [AOGrid gridWithSize:AOGridSizeMake(2, 100)];
