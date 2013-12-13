@@ -23,6 +23,14 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
+#import <Foundation/Foundation.h>
+
+#define AO_VERSION_MAJOR 1
+#define AO_VERSION_MINOR 0
+#define AO_VERSION_PATCH 0
+
+NSString *AOVersionString();
+
 #import "AOGrid.h"
 #import "AOAStar.h"
 #import "AOGraph.h"
