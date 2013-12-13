@@ -4,6 +4,19 @@ Objective-C wrapper for [xtaci/algorithms](https://github.com/xtaci/algorithms)'
 
 AlgObjc is available under the MIT license. See the LICENSE file for more info.
 
+## Install
+
+Clone this repository.
+
+The code for this project compile to a static library for iOS or OS X.
+
+The easiest way to add this library to a project is by using the [_Xcode_ sub-project method](http://www.cocoanetics.com/2011/12/sub-projects-in-xcode/):
+
+ - From the _Finder_, drag the `algobjc.xcodeproj` _Xcode_ project file into your project `Frameworks` group in _Xcode_.
+ - Into the _Build Phases Target Dependencies_ of your project target: add the target `algobjc-[ios or osx]`.
+ - Into the _Build Phases Link Binary With Libraries_ of your project target: add the lib `libalgobjc-[ios or osx].a` and `libc++.dylib`.
+ - Into the _Build Settings User Header Search Path_ of your project target: add the relative path to this project's `algobjc/include` folder.
+
 ## Usage
 
 ### Grid (2D array) structure and A* (AStar) algorithms
