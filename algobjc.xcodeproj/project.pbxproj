@@ -12,6 +12,8 @@
 		2B476463185B6C1A00C8523B /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B712D37185B6998003EF252 /* libc++.dylib */; };
 		2B476464185B6C3500C8523B /* AlgObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D7FF2185ABE1200434395 /* AlgObjcTests.m */; };
 		2B476465185B6C3500C8523B /* AlgObjcMemoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D3BD185B4FD1006B595E /* AlgObjcMemoryTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2B8F3A18185BACD00022DDDE /* AlgObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F3A17185BACD00022DDDE /* AlgObjc.m */; };
+		2B8F3A19185BACD00022DDDE /* AlgObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F3A17185BACD00022DDDE /* AlgObjc.m */; };
 		2B97B534185B6C9000EE68C1 /* libalgobjc-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B97B532185B6C8200EE68C1 /* libalgobjc-ios.a */; };
 		2B97B53A185B6CF700EE68C1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B712D34185B68F9003EF252 /* SenTestingKit.framework */; };
 		2B97B549185B6D0900EE68C1 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B712D39185B699F003EF252 /* libc++.dylib */; };
@@ -68,6 +70,7 @@
 		2B8D7FF2185ABE1200434395 /* AlgObjcTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlgObjcTests.m; path = algobjc/test/AlgObjcTests.m; sourceTree = "<group>"; };
 		2B8D7FF4185ABE2000434395 /* AlgObjc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AlgObjc-Info.plist"; path = "algobjc/src/AlgObjc-Info.plist"; sourceTree = "<group>"; };
 		2B8D7FF5185ABE2000434395 /* AlgObjc-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AlgObjc-Prefix.pch"; path = "algobjc/src/AlgObjc-Prefix.pch"; sourceTree = "<group>"; };
+		2B8F3A17185BACD00022DDDE /* AlgObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlgObjc.m; path = algobjc/src/AlgObjc.m; sourceTree = "<group>"; };
 		2B97B532185B6C8200EE68C1 /* libalgobjc-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libalgobjc-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B97B533185B6C8200EE68C1 /* libalgobjc-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libalgobjc-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B97B539185B6CF700EE68C1 /* algobjc-osx-tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "algobjc-osx-tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,7 @@
 				2B8D7FF4185ABE2000434395 /* AlgObjc-Info.plist */,
 				2B8D7FF5185ABE2000434395 /* AlgObjc-Prefix.pch */,
 				2BB8C89B185AADEF0031EA0C /* AlgObjc.h */,
+				2B8F3A17185BACD00022DDDE /* AlgObjc.m */,
 				2BCE6C24185A2EA8007D3FCB /* AOGrid.h */,
 				2B7163B9185A3502000967B3 /* AOGrid+Private.h */,
 				2BCE6C25185A2F02007D3FCB /* AOGrid.mm */,
@@ -340,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCE6C26185A2F02007D3FCB /* AOGrid.mm in Sources */,
+				2B8F3A18185BACD00022DDDE /* AlgObjc.m in Sources */,
 				2B0960DF185A4BA5004FB0E8 /* AOAStar.mm in Sources */,
 				2BCA9DF0185A9DCC002147D1 /* AOGraph.mm in Sources */,
 				2BB8C89D185AAE930031EA0C /* AODijkstra.mm in Sources */,
@@ -351,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BF8C728185AC0F900431B92 /* AOGrid.mm in Sources */,
+				2B8F3A19185BACD00022DDDE /* AlgObjc.m in Sources */,
 				2BF8C729185AC0F900431B92 /* AOAStar.mm in Sources */,
 				2BF8C72A185AC0F900431B92 /* AOGraph.mm in Sources */,
 				2BF8C72B185AC0F900431B92 /* AODijkstra.mm in Sources */,
@@ -598,6 +604,7 @@
 				2B97B548185B6CF700EE68C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BCE6BEB185A2B3E007D3FCB /* Build configuration list for PBXProject "algobjc" */ = {
 			isa = XCConfigurationList;

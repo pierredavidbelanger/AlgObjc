@@ -33,6 +33,13 @@
 
 @implementation AlgObjcTests
 
+- (void)testVersionString
+{
+    NSString *versionString = AOVersionString();
+    NSLog(@"AOVersionString: %@", versionString);
+    STAssertEqualObjects(versionString, ([NSString stringWithFormat:@"%d.%d.%d", AO_VERSION_MAJOR, AO_VERSION_MINOR, AO_VERSION_PATCH]), @"Version string should match defines");
+}
+
 - (void)testGridAndAStarUsage
 {
     // Make a 2 row x 3 col grid.
