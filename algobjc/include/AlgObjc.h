@@ -27,7 +27,7 @@
 
 #define AO_VERSION_MAJOR 1
 #define AO_VERSION_MINOR 0
-#define AO_VERSION_PATCH 0
+#define AO_VERSION_PATCH 1
 
 NSString *AOVersionString();
 
